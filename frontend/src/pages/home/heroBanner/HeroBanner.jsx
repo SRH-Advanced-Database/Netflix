@@ -31,7 +31,7 @@ const HeroBanner = () => {
         <div className="heroBanner">
             {!loading && (
                 <div className="backdrop-img">
-                    <Img src="https://miro.medium.com/v2/resize:fit:1400/1*-pY1CWn_vMe59JTGscpxcA.png" />
+                    <Img src="/src/assets/home.jpg" />
                 </div>
             )}
 
