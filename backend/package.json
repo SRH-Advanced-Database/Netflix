@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon test3.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +14,9 @@
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "ioredis": "^5.3.2",
     "mongoose": "^6.3.6",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.22",
     "redis": "^4.6.7"
   }
 }
