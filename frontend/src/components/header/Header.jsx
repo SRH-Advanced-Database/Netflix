@@ -62,15 +62,16 @@ const Header = () => {
     };
 
     const navigationHandler = (type) => {
-        if (type === "movie") {
-            navigate("/explore/movie");
-        } else if (type === "movie") {
-            navigate("/explore/tv");
-        }
-        else if (type === "logout") {
-            navigate("/");
-        }
-        setMobileMenu(false);
+    if (type === "movie") {
+        navigate("/explore/movie");
+    } else if (type === "tv") {
+        navigate("/explore/tv");
+    } else if (type === "boxOffice") {
+        navigate("/box-office");
+    } else if (type === "logout") {
+        navigate("/");
+    }
+    setMobileMenu(false);
     };
 
     return (
@@ -80,25 +81,19 @@ const Header = () => {
                     <img src={logo} alt="" />
                 </div>
                 <ul className="menuItems">
-                    <li
-                        className="menuItem"
-                        onClick={() => navigationHandler("movie")}
-                    >
+                    <li className="menuItem" onClick={() => navigationHandler("movie")}>
                         Movies
                     </li>
-                    <li
-                        className="menuItem"
-                        onClick={() => navigationHandler("tv")}
-                    >
+                    <li className="menuItem" onClick={() => navigationHandler("tv")}>
                         TV Shows
                     </li>
+                    <li className="menuItem" onClick={() => navigationHandler("boxOffice")}>
+                        Box Office
+                    </li> {/* New tab */}
                     <li className="menuItem">
                         <HiOutlineSearch onClick={openSearch} />
                     </li>
-                    <li
-                        className="menuItem"
-                        onClick={() => navigationHandler("logout")}
-                    >
+                    <li className="menuItem" onClick={() => navigationHandler("logout")}>
                         Logout
                     </li>
                 </ul>
