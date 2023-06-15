@@ -206,6 +206,32 @@ app.get("/get_box_office", async (req, res) => {
   }
 });
 
+
+app.get("/get_reddit_comments", async (req, res) => {
+  try {
+    const client = await MongoClient.connect(
+      "mongodb+srv://rahul:Qwerty123@netflix.schcbhv.mongodb.net/"
+    );
+    const db = client.db("netflix");
+    const collection = db.collection("reddit_comments");
+
+    const result = await collection.find({}).toArray();
+    //   console.log(result);
+
+    client.close();
+
+    console.log("Data retrieved from MongoDB");
+
+    res.json({ result });
+  
+    //   console.log(resultt)
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "An error occurred" });
+  }
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
