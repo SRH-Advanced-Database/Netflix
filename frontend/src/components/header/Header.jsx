@@ -62,18 +62,6 @@ const Header = () => {
     };
 
     const navigationHandler = (type) => {
-<<<<<<< HEAD
-    if (type === "movie") {
-        navigate("/explore/movie");
-    } else if (type === "tv") {
-        navigate("/explore/tv");
-    } else if (type === "boxOffice") {
-        navigate("/box-office");
-    } else if (type === "logout") {
-        navigate("/");
-    }
-    setMobileMenu(false);
-=======
         if (type === "movie") {
             navigate("/explore/movie");
         } else if (type === "tv") {
@@ -86,7 +74,6 @@ const Header = () => {
             navigate("/comments");
         }
         setMobileMenu(false);
->>>>>>> 82602ec7122eeedf98a05a29c10bc2677f8a0899
     };
 
     return (
@@ -102,21 +89,11 @@ const Header = () => {
                     <li className="menuItem" onClick={() => navigationHandler("tv")}>
                         TV Shows
                     </li>
-<<<<<<< HEAD
-                    <li className="menuItem" onClick={() => navigationHandler("boxOffice")}>
-                        Box Office
-                    </li> {/* New tab */}
-                    <li className="menuItem">
-                        <HiOutlineSearch onClick={openSearch} />
-                    </li>
-                    <li className="menuItem" onClick={() => navigationHandler("logout")}>
-                        Logout
-=======
                     <li
                         className="menuItem"
                         onClick={() => navigationHandler("box-office")}
                     >
-                        Box Office Data
+                        Box Office
                     </li>
                     <li
                         className="menuItem"
@@ -126,7 +103,6 @@ const Header = () => {
                     </li>
                     <li className="menuItem">
                         <HiOutlineSearch onClick={openSearch} />
->>>>>>> 82602ec7122eeedf98a05a29c10bc2677f8a0899
                     </li>
                 </ul>
 
