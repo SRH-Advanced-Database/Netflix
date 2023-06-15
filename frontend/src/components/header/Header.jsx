@@ -64,11 +64,14 @@ const Header = () => {
     const navigationHandler = (type) => {
         if (type === "movie") {
             navigate("/explore/movie");
-        } else if (type === "movie") {
+        } else if (type === "tv") {
             navigate("/explore/tv");
         }
-        else if (type === "logout") {
-            navigate("/");
+        else if (type === "box-office") {
+            navigate("/box-office");
+        }
+        else if (type === "comments") {
+            navigate("/comments");
         }
         setMobileMenu(false);
     };
@@ -92,14 +95,20 @@ const Header = () => {
                     >
                         TV Shows
                     </li>
-                    <li className="menuItem">
-                        <HiOutlineSearch onClick={openSearch} />
+                    <li
+                        className="menuItem"
+                        onClick={() => navigationHandler("box-office")}
+                    >
+                        Box Office Data
                     </li>
                     <li
                         className="menuItem"
-                        onClick={() => navigationHandler("logout")}
+                        onClick={() => navigationHandler("comments")}
                     >
-                        Logout
+                        Comments
+                    </li>
+                    <li className="menuItem">
+                        <HiOutlineSearch onClick={openSearch} />
                     </li>
                 </ul>
 
