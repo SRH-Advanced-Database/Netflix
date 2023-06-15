@@ -1,17 +1,23 @@
 .boxOffice {
     height: 7800px;
     padding-top: 100px;
+
     .contentWrapper {
         text-align: center;
         color: white;
         display: flex;
         flex-direction: column;
+
         .bigText {
             font-size: 150px;
-            font-weight: 700;
+            font-weight: 800;
+            font-family: "Your Desired Font", sans-serif;
+            display: flex;
+            align-items: center;
         }
+
         .smallText {
-            font-size: 30px;
+            font-size: 28px;
         }
     }
 }
