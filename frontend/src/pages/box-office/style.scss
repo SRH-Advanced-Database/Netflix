@@ -1,5 +1,5 @@
 .boxOffice {
-    height: 7800px;
+    height: 15100px;
     padding-top: 100px;
 
     .contentWrapper {
@@ -11,9 +11,14 @@
         .bigText {
             font-size: 150px;
             font-weight: 800;
-            font-family: "Your Desired Font", sans-serif;
+            font-family: "Georgia", sans-serif;
             display: flex;
             align-items: center;
+
+            /* Set the color of "Box Office" to red */
+            .boxOfficeText {
+                color: red;
+            }
         }
 
         .smallText {
