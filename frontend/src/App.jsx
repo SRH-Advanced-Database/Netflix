@@ -12,8 +12,13 @@ import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
+<<<<<<< HEAD
 import Login from "./pages/login/Login";
 import BoxOfficePage from "./components/boxOffice/boxoffice";
+=======
+import BoxOffice from "./pages/box-office/BoxOffice";
+import Comments from "./pages/comments/Comments";
+>>>>>>> 82602ec7122eeedf98a05a29c10bc2677f8a0899
 
 function App() {
     const dispatch = useDispatch();
@@ -62,8 +67,13 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+<<<<<<< HEAD
                 <Route path="/login" element={<Login />} />
                 <Route path="/box-office" element={<BoxOfficePage />} />
+=======
+                <Route path="/box-office" element={<BoxOffice />} />
+                <Route path="/comments" element={<Comments />} />
+>>>>>>> 82602ec7122eeedf98a05a29c10bc2677f8a0899
                 <Route path="/:mediaType/:id" element={<Details />} />
                 <Route path="/search/:query" element={<SearchResult />} />
                 <Route path="/explore/:mediaType" element={<Explore />} />
