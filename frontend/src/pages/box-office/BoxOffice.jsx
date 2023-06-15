@@ -9,7 +9,7 @@ const BoxOffice = () => {
         <div className="boxOffice">
             <ContentWrapper>
                 <span className="bigText">Box Office</span>
-                <span className="smallText">Page not found!</span>
+                <span className="smallText">insert data here</span>
             </ContentWrapper>
         </div>
     );
