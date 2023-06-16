@@ -62,7 +62,7 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                     <div className="carouselItems" ref={carouselContainer}>
                         {data?.map((item) => {
                             const posterUrl = item.poster_path
-                                ? url.poster + item.poster_path
+                                ? "https://image.tmdb.org/t/p/original" + item.poster_path
                                 : PosterFallback;
                             return (
                                 <div
