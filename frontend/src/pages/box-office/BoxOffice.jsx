@@ -68,7 +68,7 @@ const BoxOfficePage = () => {
             <div className="movieBoxOfficeContainer">
               {movieBoxOffice.map((movie) => (
                 <div key={movie._id} className="movieBoxOfficeItem">
-                  <h1>Movie: {movie.Movie}</h1>
+                  <h1>{movie.Movie}</h1>
                   <div className="movieBoxOfficeDetails">
                     <div className="movieBoxOfficeDetail">
                       <p>Rank:</p>
