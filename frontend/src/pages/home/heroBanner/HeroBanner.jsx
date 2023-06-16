@@ -31,10 +31,18 @@ const HeroBanner = () => {
         <div className="heroBanner">
             {!loading && (
                 <div className="backdrop-img">
-                    <Img src="/src/assets/home.jpg" />
+                    <Img src="/src/assets/home.jpg"/>
                 </div>
             )}
-
+            <div className="heroBannerContent">
+                <div className="title">
+                Welcome to <i>Neoflix!</i>
+                </div>
+                <div className="subTitle">
+                Find the latest movies and TV shows, box-office data,
+                recommendations and so much more!
+                </div>
+            </div>
             <div className="opacity-layer"></div>
         </div>
     );
