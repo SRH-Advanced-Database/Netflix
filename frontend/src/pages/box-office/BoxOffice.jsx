@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./style.scss";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
@@ -29,6 +29,16 @@ const BoxOfficePage = () => {
   return (
     <div className="boxOffice">
       <ContentWrapper>
+        <span className="bigText">
+          <span role="img" aria-label="money">
+            💰
+          </span>{" "}
+          <span className="boxOfficeText">BOX OFFICE</span>{" "}
+          <span role="img" aria-label="money">
+            💰
+          </span>
+        </span>
+        <br /> <br /> <br />
         <Tabs>
           <TabList>
             <Tab>Production Box Office</Tab>
@@ -36,53 +46,54 @@ const BoxOfficePage = () => {
           </TabList>
 
           <TabPanel>
-            <span className="bigText">
-              <span role="img" aria-label="money">
-                💰
-              </span>{" "}
-              <span className="boxOfficeText">BOX OFFICE</span>{" "}
-              <span role="img" aria-label="money">
-                💰
-              </span>
-            </span>
             <span className="smallText">
               {boxOfficeData.map((movie) => (
                 <div key={movie._id}>
-                  <br /> <br /> <br /> <br />
+                  <br /> <br /> <br />
+                  {movie.Poster && (
+                    <img src={movie.Poster} alt={movie.Movie} className="moviePoster" />
+                  )}
                   <h1>Production: {movie.Production}</h1>
                   <h2>Movie: {movie.Movie}</h2>
                   <p>Rank: {movie.Rank}</p>
-                  <p>Total Revenue: {movie["Total Revenue"]}</p>
                   <p>Number of Releases: {movie["Number of Releases"]}</p>
                   <p>Lifetime Gross: {movie["Lifetime Gross"]}</p>
+                  <p>Total Revenue: {movie["Total Revenue"]}</p>
                 </div>
               ))}
             </span>
           </TabPanel>
 
           <TabPanel>
-            <span className="bigText">
-              <span role="img" aria-label="money">
-                💰
-              </span>{" "}
-              <span className="boxOfficeText">BOX OFFICE</span>{" "}
-              <span role="img" aria-label="money">
-                💰
-              </span>
-            </span>
-            <span className="smallText">
+            <div className="movieBoxOfficeContainer">
               {movieBoxOffice.map((movie) => (
-                <div key={movie._id}>
-                  <br /> <br /> <br /> <br />
-                  <h2>Movie: {movie.Movie}</h2>
-                  <p>Rank: {movie.Rank}</p>
-                  <p>Worldwide Lifetime Gross: {movie["Worldwide Lifetime Gross"]}</p>
-                  <p>Domestic Lifetime Gross: {movie["Domestic Lifetime Gross"]}</p>
-                  <p>Foreign Lifetime Gross: {movie["Foreign Lifetime Gross"]}</p>
-                  <p>Year: {movie.Year}</p>
+                <div key={movie._id} className="movieBoxOfficeItem">
+                  <h1>Movie: {movie.Movie}</h1>
+                  <div className="movieBoxOfficeDetails">
+                    <div className="movieBoxOfficeDetail">
+                      <p>Rank:</p>
+                      <p>{movie.Rank}</p>
+                    </div>
+                    <div className="movieBoxOfficeDetail">
+                      <p>Year:</p>
+                      <p>{movie.Year}</p>
+                    </div>
+                    <div className="movieBoxOfficeDetail">
+                      <p>Worldwide Lifetime Gross:</p>
+                      <p>{movie["Worldwide Lifetime Gross"]}</p>
+                    </div>
+                    <div className="movieBoxOfficeDetail">
+                      <p>Domestic Lifetime Gross:</p>
+                      <p>{movie["Domestic Lifetime Gross"]}</p>
+                    </div>
+                    <div className="movieBoxOfficeDetail">
+                      <p>Foreign Lifetime Gross:</p>
+                      <p>{movie["Foreign Lifetime Gross"]}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
-            </span>
+            </div>
           </TabPanel>
         </Tabs>
       </ContentWrapper>

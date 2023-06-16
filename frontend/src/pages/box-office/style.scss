@@ -1,5 +1,5 @@
 .boxOffice {
-    height: 15100px;
+    height: 41500px;
     padding-top: 100px;
 
     .contentWrapper {
@@ -15,7 +15,6 @@
             display: flex;
             align-items: center;
 
-            /* Set the color of "Box Office" to red */
             .boxOfficeText {
                 color: red;
             }
@@ -24,5 +23,93 @@
         .smallText {
             font-size: 28px;
         }
+    }
+
+    .boxOfficeHeader {
+        margin-bottom: 30px;
+    }
+
+    .tabList {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .tab {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            margin: 0 10px;
+            color: #777;
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease;
+
+            &.react-tabs__tab--selected {
+                color: #000;
+                border-bottom: 2px solid #000;
+            }
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    .tabPanel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movieItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .moviePoster {
+        width: 400px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .movieBoxOfficeContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .movieBoxOfficeItem {
+        background-color: rgb(188, 53, 53);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px;
+        width: 500px;
+        border: 2px solid gray;
+        box-shadow: 0px 0px 5px 2px rgba(225, 9, 9, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movieBoxOfficeDetails {
+        margin-top: 20px;
+    }
+
+    .movieBoxOfficeDetail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: black;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
     }
 }
