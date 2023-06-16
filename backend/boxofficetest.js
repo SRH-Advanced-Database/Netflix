@@ -9,13 +9,13 @@ const PORT = 3000;
 app.use(cors());
 
 // hit the external api and save in mongodb
-app.get("/get_box_officeccccccccccccccccccccccccccc", async (req, res) => {
+app.get("/get_movie_box_officec", async (req, res) => {
   try {
     const client = await MongoClient.connect(
       "mongodb+srv://rahul:Qwerty123@netflix.schcbhv.mongodb.net/"
     );
     const db = client.db("netflix");
-    const collection = db.collection("box_office");
+    const collection = db.collection("movie_box_office");
 
     const result = await collection.find({}).toArray();
     //   console.log(result);
