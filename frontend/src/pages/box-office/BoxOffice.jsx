@@ -49,7 +49,7 @@ const BoxOfficePage = () => {
             <span className="smallText">
               {boxOfficeData.map((movie) => (
                 <div key={movie._id}>
-                  <br /> <br /> <br />
+                  <br /> <br />
                   {movie.Poster && (
                     <img src={movie.Poster} alt={movie.Movie} className="moviePoster" />
                   )}

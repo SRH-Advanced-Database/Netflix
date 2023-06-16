@@ -1,5 +1,5 @@
 .boxOffice {
-    height: 41500px;
+    height: 100%;
     padding-top: 100px;
 
     .contentWrapper {
@@ -9,7 +9,7 @@
         flex-direction: column;
 
         .bigText {
-            font-size: 150px;
+            font-size: 120px;
             font-weight: 800;
             font-family: "Georgia", sans-serif;
             display: flex;
@@ -29,38 +29,40 @@
         margin-bottom: 30px;
     }
 
-    .tabList {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
+    .react-tabs {
+        &__tab-list {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
 
-        .tab {
-            font-size: 24px;
-            font-weight: bold;
-            padding: 10px;
-            cursor: pointer;
-            background-color: transparent;
-            border: none;
-            margin: 0 10px;
-            color: #777;
-            font-family: Arial, sans-serif;
-            transition: all 0.3s ease;
+            .react-tabs__tab {
+                font-size: 24px;
+                font-weight: bold;
+                padding: 10px;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                margin: 0 10px;
+                color: #777777;
+                font-family: Arial, sans-serif;
+                transition: all 0.1s ease;
 
-            &.react-tabs__tab--selected {
-                color: #000;
-                border-bottom: 2px solid #000;
-            }
+                &--selected {
+                    color: #ffffff;
+                    border-bottom: 2px solid #ffffff;
+                }
 
-            &:hover {
-                color: #000;
+                &:hover {
+                    color: #f30c0c;
+                }
             }
         }
-    }
 
-    .tabPanel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        &__tab-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .movieItem {
